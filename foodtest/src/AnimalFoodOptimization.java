@@ -106,12 +106,12 @@ public class AnimalFoodOptimization {
         */
 
         // Reading animal requirements and their interchangeable food groups
-        System.out.println("Enter the number of animals:");
+        System.out.println("Enter the number of different animal species:");
         int a = scanner.nextInt();
         List<AnimalRequirement> animalRequirements = new ArrayList<>();
 
         for (int i = 0; i < a; i++) {
-            System.out.println("Enter the name of animal " + (i + 1) + ":");
+            System.out.println("Enter the species of animal " + (i + 1) + ":");
             String animal = scanner.next();
             System.out.println("Enter the amount of this animal:");
             int count = scanner.nextInt();
@@ -138,9 +138,9 @@ public class AnimalFoodOptimization {
         }
 
         // Setting constraints
-        System.out.println("Enter minimum quality:");
+        System.out.println("Enter minimum quality (from 0 to 1):");
         double minQuality = scanner.nextDouble();
-        System.out.println("Enter budget:");
+        System.out.println("Enter budget (enter 0 for the minimum):");
         double budget = scanner.nextDouble();
 
         if (budget == 0) {
